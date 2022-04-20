@@ -44,10 +44,10 @@ def signal_indicator(type=None, prediction=None):
     # slope_slow = df.iloc[-1, 12]
 
     if type == 'BUY':
-        return 1 if (prediction[-1] > THRESHOLD) else 0
+        return 1 if (prediction[-1] > .55) else 0
 
     elif type == 'SELL':
-        return 1 if (prediction[-1] < THRESHOLD) else 0
+        return 1 if (prediction[-1] < .5) else 0
 
 
 def binance_klines_data(limit=100):
